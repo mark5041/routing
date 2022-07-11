@@ -1,0 +1,18 @@
+<div>
+    <div style="text-align: center;">
+        <h1>{{titolo}}</h1>
+    </div>
+    <div>
+        <select (change)="funzioneCambioMese($event)">
+            <option *ngFor="let m of trimestre" value="{{m}}">{{m}}</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <input type="text" [(ngModel)]='visibile'> {{visibile}}
+    </div>
+    <br>
+    <span *ngIf='visibile'>Valore visualizzato</span>
+    <br>
+    <button (click)="funzioneAlClick($event)">Premi pulsante</button>
+</div>

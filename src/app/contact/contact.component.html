@@ -1,0 +1,40 @@
+<h3>
+    Per informazione contattare
+</h3>
+<p>
+    <a href="mailto:info@xyz.it">Contatti</a>
+</p>
+
+<div class="col-sm-5">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" 
+            placeholder="Username..." name="username" [formControl] ="username" 
+            minlength="4" maxlength="10" pattern="^[a-zA-Z0-9]+$">
+        </div>
+
+        <div *ngIf="username.hasError('required')" class="alert alert-danger">
+            Lo username e' richiesto
+        </div>
+
+        <div *ngIf="username.hasError('minlength')" class="alert alert-warning">
+            Lo username e' troppo corto, lunghezza minima 4
+        </div>
+
+        <div *ngIf="username.hasError('pattern')" class="alert alert-warning">
+            Lo username accetta solo lettere e numeri
+        </div>
+
+        <div *ngIf="!username.dirty && username.pristine" class="alert alert-info">
+            Lo username non e' stato compilato
+        </div>
+
+        <div *ngIf="!userForm.valid" class="alert alert-info">
+            Il form non e' valido
+        </div>
+        
+        <button type="submit" [disabled]="!userForm.valid" class="btn btn-info">Invia dati</button>
+    </form>
+</div>

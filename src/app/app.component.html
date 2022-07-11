@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Esempio Routing</h1>
+  </div>
+  <nav>
+    <ul class="nav nav-tabs nav-justified">
+      <li><a [routerLink]="['/home']">Home Page</a></li>
+      <li><a [routerLink]="['/about']">About</a></li>
+      <li><a [routerLink]="['/contact']">Contatti</a></li>
+      <li><a [routerLink]="['/observer']">Es Observer</a></li>
+      <li><a [routerLink]="['/custom']">Es Custom</a></li>
+      <li><a [routerLink]="['/binding']">Es Binding</a></li>
+    </ul>
+  </nav>
+  <div style="margin-top: 50px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
