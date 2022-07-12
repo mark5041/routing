@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ObserverTestComponent } from './observer-test/observer-test.component';
 import { BindingComponent } from './binding/binding.component';
 import { CustomValidatorComponent } from './custom-validator/custom-validator.component';
+import { PipesTestComponent } from './pipes-test/pipes-test.component';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent },
   { path: 'observer', component: ObserverTestComponent },
   {path: 'custom', component: CustomValidatorComponent },
-  {path: 'binding', component: BindingComponent }
+  {path: 'binding', component: BindingComponent},
+  {path: 'pipes', component: PipesTestComponent },
 ];
 
 @NgModule({
@@ -33,7 +35,8 @@ const routes: Routes = [
     ContactComponent,
     ObserverTestComponent,
     BindingComponent,
-    CustomValidatorComponent
+    CustomValidatorComponent,
+    PipesTestComponent
   ],
   imports: [
     BrowserModule,

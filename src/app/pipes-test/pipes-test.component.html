@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="page-header">
+        <h1>{{titolo}}</h1>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Pipes</th>
+                <th>Conversion</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Uppercase</td>
+                <td>{{titolo | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>Lowercase</td>
+                <td>{{testo | lowercase}}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>{{data | date:'full'}}
+                    <br>
+                    {{data |date:'shortTime'}}
+                    <br>
+                    {{data | date:'d/M/y'}}
+                </td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td>{{numero | currency: 'EUR'}}</td>
+            </tr>
+            <tr>
+                <td>Numero</td>
+                <td>{{numero | number:'3.2-4'}}</td>
+            </tr>
+            <tr>
+                <td>Percentuale</td>
+                <td>{{percentuale | percent}}</td>
+            </tr>
+            <tr>
+                <td>json</td>
+                <td>{{oggettoJson | json}}</td>
+            </tr>
+            <tr>
+                <td>Splice</td>
+                <td>{{giorni | slice:3:7}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
